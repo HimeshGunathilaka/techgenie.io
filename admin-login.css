@@ -1,0 +1,78 @@
+body{
+    background-image: url(./assets/img/teamwork6.jpg);
+    background-size: cover;
+}
+#login{
+    position: absolute;
+    border: 1px solid white;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#login h1{
+    margin-bottom: 15px;
+}
+td p{
+    margin-bottom: 0px;
+}
+#container{
+    display: flex;
+    justify-content: center;
+}
+table{
+    margin-bottom: 15px;
+}
+.label{
+    width: 30%;
+}
+.para{
+    margin-bottom: 4px;
+}
+.input{
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin: 10px auto auto auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+}
+#submit{
+    padding: 5px 15px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    width: 100px;
+    height: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #89BDF8;
+    background-color: #89BDF8;
+    color: #464B4F;
+}
+#submit:hover{
+    background-color: #187EF3;
+    transition: 0.5s;
+    color: white;
+}
+.formtext{
+    margin: 10px auto auto auto;
+}
+#contactAdmin{
+    margin: auto auto auto 5px;
+}
+#cussupport{
+    height: 25px;
+    width: 25px;
+    margin: auto auto auto 275px;
+}

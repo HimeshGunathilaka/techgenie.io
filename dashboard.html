@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">View Site</a>
+                </li>
+            </ul>
+            <!--form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form-->
+        </div>
+    </nav>
+    <div class="headsection">
+        <div class="welcome">
+            <h1>Good Morning! Abans PLC</h1>
+            <p>This is your seller dashboard. Control your listings and products here.</p>
+        </div>
+        <div class="login-details">
+            <div class="text">
+                <p>You are logged in as Abans PLC<p>
+                <p>SRI LANKA</p>
+            </div>
+            <div class="image">
+                <img src="./assets/img/abans.jpg" alt="" height="100px">
+            </div>
+        </div>
+    </div>
+
+    <div id="notificationpanel"> 
+    </div>
+    
+    
+<!-- MODALS -->
+    <div id="addproductmodal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form action="" name="addProduct">
+                <h2 class="sectiontitle"><i class="bi bi-sliders"></i> Basic Details</h2>
+                <table id="table-basicdetails">
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Product Type</p>
+                        </td>
+                        <td>
+                            <select name="slct-productType" id="slct-productType">
+                                <option value="NS" selected>-Select-</option>
+                                <option value="mobile">Mobile</option>
+                                <option value="tablet">Tablet</option>
+                                <option value="laptop">Laptop</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Brand</p>
+                        </td>
+                        <td>
+                            <select name="slct-brand" id="slct-brand">
+                                <option value="NS" selected>-Select-</option>
+                                <option value="apple">Apple</option>
+                                <option value="samsung">Samsung</option>
+                                <option value="lg">LG</option>
+                                <option value="sony">Sony</option>
+                                <option value="Asus">Asus</option>
+                                <option value="hp">Hp</option>
+                                <option value="Acer">Acer</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Type</p>
+                        </td>
+                        <td>
+                            <select name="slct-type" id="slct-type">
+                                <option value="NS" selected>-Select-</option>
+                                <option value="apple">Gaming</option>
+                                <option value="samsung">Common use</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Model</p>
+                        </td>
+                        <td>
+                            <input type="text" name="inp-model" id="inp-model" class="input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Display Size</p>
+                        </td>
+                        <td>
+                            <input type="text" name="inp-display" id="inp-display" class="input">
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Price</p>
+                        </td>
+                        <td>
+                            <input type="number" name="inp-price" id="in-price" class="input inputnumber"> LKR
+                        </td>
+                    </tr>
+                </table>
+                <h2 class="sectiontitle"><i class="bi bi-camera"></i> Camera</i></h2>
+                <table id="table-camera">
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Front Cam</p>
+                        </td>
+                        <td>
+                            <input type="number" name="cam-front" id="cam-front" class="input">MP
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Back Cam</p>
+                        </td>
+                        <td>
+                            <input type="number" name="cam-back" id="cam-back" class="input">MP
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Camera Description</p>
+                        </td>
+                        <td>
+                            <textarea name="txt-camerades" id="txt-camerades" cols="30" rows="1" class="input" id="cameraDescription"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Additional Cababilities</p>
+                        </td>
+                        <td>
+                            <select name="slct-cam" id="slct-cam">
+                                <option value="NS" selected>-Select-</option>
+                                <option value="8K">8K</option>
+                                <option value="4K">4K</option>
+                                <option value="2K">2K</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <h2 class="sectiontitle"><i class="bi bi-battery"></i> Battery</h2>
+                <table>
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Battery Capacity</p>
+                        </td>
+                        <td>
+                            <input type="text" name="txt-batteryCapacity" id="txt-batteryCapacity" class="input inputnumber"> mAh
+                        </td>
+                    </tr>
+                </table>
+                <h2 class="sectiontitle"><i class="bi bi-speedometer2"></i> Performance</h2>
+                <table>
+                    <tr>
+                        <td class="inputlabel">
+                            <p>CPU</p>
+                        </td>
+                        <td>
+                            <input type="text" name="txt-CPU" id="txt-CPU" class="input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Memory (RAM)</p>
+                        </td>
+                        <td>
+                            <input type="number" name="txt-RAM" id="txt-RAM" class="input inputnumber"> GB
+                        </td>
+                    </tr>
+                    <!--tr class="mobileonly">
+                        <td class="inputlabel">
+                            <p>GPU</p>
+                        </td>
+                        <td>
+                            <input type="text" name="txt-GPU" id="txt-GPU" class="input">
+                        </td>
+                    </tr-->
+                    <tr class="laptoponly">
+                        <td class="inputlabel">
+                            <p>Graphics</p>
+                        </td>
+                        <td>
+                            <input type="text" name="txt-graphic" id="txt-graphic" class="input">
+                        </td>
+                    </tr>
+                </table>
+                <div class="btnsection">
+                    <input type="reset" value="Clear" id="reset">
+                    <input type="submit" value="Save" id="submit" onclick="return validateData()">
+                </div>
+            </form>
+        </div>  
+    </div>
+    <h1 class="title">Select an option</h1>
+    <div id="cardsection">
+        <div class="tile" id="addproduct">
+            <i class="bi bi-bag-plus-fill" style="font-size: 50px;"></i>
+            <p>Add Product</p>
+        </div>
+        <div class="tile delay1" id="removeProduct">
+            <i class="bi bi-trash" style="font-size: 50px;"></i>
+            <p>Remove Product</p>
+        </div>
+        <div class="tile delay2" id="editInformation">
+            <i class="bi bi-pencil-square" style="font-size: 50px;"></i>
+            <p>Edit information</p>
+        </div>
+        <div class="tile delay3" id="shopInformation">
+            <i class="bi bi-shop" style="font-size: 50px;"></i>
+            <p>Shop information</p>
+        </div>
+        <div class="tile delay4" id="changePassword">
+            <i class="bi bi-person-lines-fill" style="font-size: 50px;"></i>
+            <p>Change Password</p>
+        </div>
+        <div class="tile delay5" id="myBrands">
+            <i class="bi bi-apple" style="font-size: 50px;"></i>
+            <p>My Brands</p>
+        </div>
+    </div>
+  
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    var modal = document.getElementById("addproductmodal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("addproduct");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    document.getElementById('removeProduct').onclick = function(){
+        location.href='editproduct.html';
+    };
+    document.getElementById('editInformation').onclick = function(){
+        location.href='editproduct.html';
+    };
+
+    function validateData(){
+        let type = document.forms['addProduct']['slct-productType'].value;
+        let brand = document.forms['addProduct']['slct-brand'].value;
+        let model = document.forms['addProduct']['inp-model'].value;
+        let display = document.forms['addProduct']['inp-display'].value;
+        let back_cam = document.forms['addProduct']['cam-front'].value;
+        let front_cam = document.forms['addProduct']['cam-back'].value;
+        let use_type = document.forms['addProduct']['slct-Type'].value;
+        let price = document.forms['addProduct']['inp-price'].value;
+        let cameraModule = document.forms['addProduct']['slct-cam'].value;
+        let cameraDescription = document.forms['addProduct']['txt-camerades'].value;
+        let batteryCapacity = document.forms['addProduct']['txt-batteryCapacity'].value;
+        let CPU = document.forms['addProduct']['txt-CPU'].value;
+        let RAM = document.forms['addProduct']['txt-RAM'].value;
+        let graphic = document.forms['addProduct']['txt-graphic'].value;
+    
+        if(
+            (type=="NS")
+            ||(brand=="NS")
+            ||(model=="")
+            ||(display=="")
+            ||(back_cam=="")
+            ||(front_cam=="")
+            ||(use_type=="NS")
+            ||(price<0)
+            ||(cameraModule=="NS")
+            ||(cameraDescription=="")
+            ||(batteryCapacity<0)
+            ||(CPU=="")
+            ||(RAM<0)
+            ||(graphic=="")){
+
+                
+                document.getElementById("notificationpanel").innerHTML = "<div class='msg-error message'> <div class='notifi-btnsection'> <h4>System Notification</h4> <i class='bi bi-x' id='closeNotification' onclick='closeNotificationPanel();'></i> </div><div class='window'> <div class='icon'> <i class='bi bi-x-circle-fill'></i> </div><div class='text'> <div class='notifi-title'> <h3>Error!</h3> </div><div class='messagebody'> <p>Only enter valid information in the required fields</p></div></div></div></div>";
+                document.getElementById("notificationpanel").style.display = "flex";
+                return false;
+
+            }
+            else{
+                setTimeout(addSuccessfull, 1500);
+                function addSuccessfull(){
+                    document.getElementById("notificationpanel").innerHTML = "<div class='msg-success message'> <div class='notifi-btnsection'> <h4>System Notification</h4> <i class='bi bi-x' id='closeNotification' onclick='closeNotificationPanel();'></i> </div><div class='window'> <div class='icon'> <i class='bi bi-check-circle-fill'></i> </div><div class='text'> <div class='notifi-title'> <h3>Success!</h3> </div><div class='messagebody'> <p>Your item is added successfully!</p></div></div></div></div>"
+                    document.getElementById("notificationpanel").style.display = "flex";
+                }
+            }
+        }
+        function closeNotificationPanel(){
+            document.getElementById("notificationpanel").style.display = "none";
+        }
+    </script>
+</body>
+</html>

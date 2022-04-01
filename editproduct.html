@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="viewproduct.css">    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">View Site</a>
+                </li>
+            </ul>
+            <!--form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form-->
+        </div>
+    </nav>
+    <div class="headsection">
+        <div class="welcome">
+            <h1>Good Morning! Abans PLC</h1>
+            <p>This is your seller dashboard. Control your listings and products here.</p>
+        </div>
+        <div class="login-details">
+            <div class="text">
+                <p>You are logged in as Abans PLC<p>
+                <p>SRI LANKA</p>
+            </div>
+            <div class="image">
+                <img src="./assets/img/abans.jpg" alt="" height="100px">
+            </div>
+        </div>
+    </div>
+    <div id="toolbar">
+        <button>Edit</button>
+        <button>Delete</button>
+    </div>
+    <form action="" name="addProduct">
+        <h2 class="sectiontitle"><i class="bi bi-sliders"></i> Basic Details</h2>
+        <table id="table-basicdetails">
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Product Type</p>
+                        </td>
+                        <td>
+                            <select required name="slct-productType" id="slct-productType">
+                                <option value="NS" selected>-Select-</option>
+                                <option value="mobile">Mobile</option>
+                                <option value="tablet">Tablet</option>
+                                <option value="laptop">Laptop</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Brand</p>
+                        </td>
+                        <td>
+                            <select required name="slct-brand" id="slct-brand">
+                                <option value="NS" selected>-Select-</option>
+                                <option value="apple">Apple</option>
+                                <option value="samsung">Samsung</option>
+                                <option value="lg">LG</option>
+                                <option value="sony">Sony</option>
+                                <option value="Asus">Asus</option>
+                                <option value="hp">Hp</option>
+                                <option value="Acer">Acer</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Type</p>
+                        </td>
+                        <td>
+                            <select required name="slct-type" id="slct-type">
+                                <option value="NS" selected>-Select-</option>
+                                <option value="apple">Gaming</option>
+                                <option value="samsung">Common use</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Model</p>
+                        </td>
+                        <td>
+                            <input required type="text" name="model" id="inp-model" class="input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Display Size</p>
+                        </td>
+                        <td>
+                            <input required type="text" name="display" id="inp-display" class="input">
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Price</p>
+                        </td>
+                        <td>
+                            <input required type="number" name="price" id="in-price" class="input inputnumber"> LKR
+                        </td>
+                    </tr>
+                </table>
+                <h2 class="sectiontitle"><i class="bi bi-camera"></i> Camera</i></h2>
+                <table id="table-camera">
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Front Cam</p>
+                        </td>
+                        <td>
+                            <input required type="number" name="cam-front" id="cam-front" class="input">MP
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Back Cam</p>
+                        </td>
+                        <td>
+                            <input required type="number" name="cam-back" id="cam-back" class="input">MP
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Camera Description</p>
+                        </td>
+                        <td>
+                            <textarea required name="txt-camerades" id="txt-camerades" cols="30" rows="1" class="input" id="cameraDescription"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Additional Cababilities</p>
+                        </td>
+                        <td>
+                            <select required name="slct-cam" id="slct-cam">
+                                <option value="NS" selected>-Select-</option>
+                                <option value="8K">8K</option>
+                                <option value="4K">4K</option>
+                                <option value="2K">2K</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <h2 class="sectiontitle"><i class="bi bi-battery"></i> Battery</h2>
+                <table>
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Battery Capacity</p>
+                        </td>
+                        <td>
+                            <input required type="text" name="txt-batteryCapacity" id="txt-batteryCapacity" class="input inputnumber"> mAh
+                        </td>
+                    </tr>
+                </table>
+                <h2 class="sectiontitle"><i class="bi bi-speedometer2"></i> Performance</h2>
+                <table>
+                    <tr>
+                        <td class="inputlabel">
+                            <p>CPU</p>
+                        </td>
+                        <td>
+                            <input required type="text" name="txt-CPU" id="txt-CPU" class="input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="inputlabel">
+                            <p>Memory (RAM)</p>
+                        </td>
+                        <td>
+                            <input required type="number" name="txt-RAM" id="txt-RAM" class="input inputnumber"> GB
+                        </td>
+                    </tr>
+                    <tr class="mobileonly">
+                        <td class="inputlabel">
+                            <p>GPU</p>
+                        </td>
+                        <td>
+                            <input required type="text" name="txt-GPU" id="txt-GPU" class="input">
+                        </td>
+                    </tr>
+                    <tr class="laptoponly">
+                        <td class="inputlabel">
+                            <p>Graphics</p>
+                        </td>
+                        <td>
+                            <input required type="text" name="txt-graphic" id="txt-graphic" class="input">
+                        </td>
+                    </tr>
+                </table>
+        <!-- <div class="btnsection">
+            <input type="reset" value="Clear" id="reset">
+            <input type="submit" value="Save" id="submit" onclick="return validateData()">
+        </div> -->
+    </form>
+</body>
+</html>

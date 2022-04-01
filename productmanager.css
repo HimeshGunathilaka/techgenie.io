@@ -1,0 +1,51 @@
+.headsection{
+    background-color: #e7e7e7;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.login-details{
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+}
+.login-details p{
+    margin-bottom: 0px;
+}
+.login-details img{
+    margin-left: 10px;
+}
+#producttable{
+    width: 100%;
+    margin-top: 25px;
+}
+#header-code,#header-date,#header-brand,#header-model{
+    width: 10vw;
+}
+#header-colors,#header-storage{
+    width: 15vw;
+}
+th{
+    background-color: #e43c5c;
+    padding: 5px 10px;
+    color: white;
+}
+th p{
+    margin-bottom: 0px;
+}
+td{
+    padding: 5px 10px;
+    cursor: pointer;
+}
+td p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.datarow:hover{
+    background-color: #e7e7e7;
+}
+#pagenavigation{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
